@@ -1,16 +1,12 @@
 import React from 'react'
 import Tour from './Tour';
 
-const Tours = ({ tours }) => {
+const Tours = ({ tours, removeTour }) => {
   const mapedTours = tours.map((tour) => {
-    console.log(tour)
     return(
-      // Coś tu nie działa
-      <Tour key={tour.id} {...tour} />
+      <Tour key={tour.id} {...tour} removeTour={removeTour} />
     )
   })
-
-  console.log("mapedTours: ", mapedTours)
 
   return (
     <section>
